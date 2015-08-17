@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbc4f1b4-5011-4db7-956d-311d819f7a3b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/radio/BaseRadio.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vehicle/BaseVehicle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vehicle/Car.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/radio/CheapRadio.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Driver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/DriverTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/radio/ExpensiveRadio.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/vehicle/Helicopter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DependencyInversion/DependencyInversion.iml" afterPath="$PROJECT_DIR$/../DependencyInversion/DependencyInversion.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DependencyInversion/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/../DependencyInversion/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DependencyInversion/.idea/misc.xml" afterPath="$PROJECT_DIR$/../DependencyInversion/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DependencyInversion/src/test/java/DriverTest.java" afterPath="$PROJECT_DIR$/../DependencyInversion/src/test/java/DriverTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../DependencyInversion/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DependencyInversion/.idea/workspace.xml" />
     </list>
     <ignored path="LiskovSubstitution.iws" />
@@ -781,7 +770,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="170" y="97" width="1662" height="1057" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />

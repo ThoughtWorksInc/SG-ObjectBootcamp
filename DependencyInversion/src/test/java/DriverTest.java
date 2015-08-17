@@ -6,7 +6,7 @@ public class DriverTest {
         Driver driver = new Driver();
         driver.speedUp();
 
-        //assert???
+        //assert car speed has increased
     }
 
     @Test
@@ -14,7 +14,7 @@ public class DriverTest {
         Driver driver = new Driver();
         driver.slowDown();
 
-        //assert???
+        //assert car speed has decreased
     }
 
     @Test
@@ -22,7 +22,7 @@ public class DriverTest {
         Driver driver = new Driver();
         driver.listenToRadio();
 
-        //assert???
+        //assert radio is on
     }
 
     @Test
@@ -31,7 +31,7 @@ public class DriverTest {
         driver.listenToRadio();
         driver.concentrate();
 
-        //assert???
+        //assert radio is off
     }
 
     @Test
@@ -40,7 +40,7 @@ public class DriverTest {
         driver.listenToRadio();
         driver.listeningToFavouriteSong();
 
-        //assert???
+        //assert volume has increased
     }
 
     @Test
@@ -49,6 +49,6 @@ public class DriverTest {
         driver.listenToRadio();
         driver.talkingToPassenger();
 
-        //assert???
+        //assert volume has decreased
     }
 }
