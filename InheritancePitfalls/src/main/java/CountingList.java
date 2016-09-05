@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 
 /**
  * This is a famous Java example by Joshua Bloch to highlight the pitfalls of inheritance
@@ -23,5 +21,9 @@ public class CountingList extends MyStringList {
 
     public int getCounter() {
         return counter;
+    }
+
+    public String toString() {
+        return String.format("Added %d elements: %s", counter, super.concatenateList(", "));
     }
 }

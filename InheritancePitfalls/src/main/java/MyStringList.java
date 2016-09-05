@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class MyStringList {
 	private ArrayList<String> list = new ArrayList<>();
@@ -9,5 +10,8 @@ public class MyStringList {
 	}
 	public void addAll(Collection<String> t) {
 		t.forEach(this::add);
+	}
+	public String concatenateList(String delimiter) {
+		return String.join(delimiter, list);
 	}
 }

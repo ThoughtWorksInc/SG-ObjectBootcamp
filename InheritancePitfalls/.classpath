@@ -5,5 +5,5 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="lib" path="/Users/thaodang/Projects/SG OO Bootcamp/SG-ObjectBootcamp/lib/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="/Users/thaodang/Projects/SG OO Bootcamp/SG-ObjectBootcamp/lib/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="output" path="build"/>
 </classpath>
