@@ -8,68 +8,39 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 public class DriverTest {
-    Tank tank;
+    @Test
+    public void shouldDecreaseFuelWhenGoingForDrive() {
+        Car car = new Car(5);
+        Driver driver = new Driver(car);
 
-    @Before
-    public void setup() {
-        tank = new Tank(5);
+        driver.drive();
+
+        assertThat(car.checkFuelLevel(), is(4));
     }
 
     @Test
-    public void shouldIncreaseBothLeftAndRightWhenMovingForward() {
-        Driver driver = new Driver(tank);
+    public void shouldDecreaseFuelBy5WhenGoingForLongDrive() {
+        Car car = new Car(7);
+        Driver driver = new Driver(car);
 
-        driver.moveForward();
+        driver.goForLongDrive();
 
-        assertThat(tank.getLeftSpeed(), is(greaterThan(0)));
-        assertThat(tank.getRightSpeed(), is(greaterThan(0)));
-        assertThat(tank.getRightSpeed(), is(equalTo(tank.getLeftSpeed())));
+        assertThat(car.checkFuelLevel(), is(2));
     }
 
-    @Test
-    public void shouldDecreaseBothLeftAndRightWhenMovingBackward() {
-        Driver driver = new Driver(tank);
+    @Test(expected=OutOfFuelException.class)
+    public void shouldThrowOutOfFuelIfDrivingOnEmpty() {
+        Car car = new Car(0);
+        Driver driver = new Driver(car);
 
-        driver.moveBackward();
-
-        assertThat(tank.getLeftSpeed(), is(lessThan(0)));
-        assertThat(tank.getRightSpeed(), is(lessThan(0)));
-        assertThat(tank.getRightSpeed(), is(equalTo(tank.getLeftSpeed())));
+        driver.drive();
     }
 
-    @Test
-    public void shouldMakeLeftSpeedGreaterThanRightSpeedWhenTurningRight() {
-        Driver driver = new Driver(tank);
+    @Test(expected=NotEnoughFuelException.class)
+    public void shouldThrowNotEnoughFuelIfGoingForLongDrivingWithoutEnough() {
+        Car car = new Car(3);
+        Driver driver = new Driver(car);
 
-        driver.turnRight();
-
-        assertThat(tank.getRightSpeed(), is(lessThan(tank.getLeftSpeed())));
-    }
-
-    @Test
-    public void shouldMakeRightSpeedGreaterThanLeftSpeedWhenTurningLeft() {
-        Driver driver = new Driver(tank);
-
-        driver.turnLeft();
-
-        assertThat(tank.getRightSpeed(), is(greaterThan(tank.getLeftSpeed())));
-    }
-
-    @Test
-    public void shouldStopWhenCallingStop() {
-        Driver driver = new Driver(tank);
-        driver.moveForward();
-
-        driver.allStop();
-
-        assertThat(tank.getLeftSpeed(), is(equalTo(0)));
-        assertThat(tank.getRightSpeed(), is(equalTo(0)));
-
-    }
-
-    @Test(expected=AlarmRaisedException.class)
-    public void shouldRaiseAlarmExceptionWhenRaisingAlarm() {
-        Driver driver = new Driver(tank);
-        driver.raiseAlarm();
+        driver.goForLongDrive();
     }
 }

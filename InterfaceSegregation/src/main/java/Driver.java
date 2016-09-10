@@ -1,41 +1,17 @@
 public class Driver {
-    private Tank tank;
+    private Car car;
 
-    public Driver(Tank tank) {
+    public Driver(Car car) {
 
-        this.tank = tank;
+        this.car = car;
     }
 
-    public void moveForward() {
-        allStop();
-        tank.increaseLeftSpeed();
-        tank.increaseRightSpeed();
+    public void drive() throws OutOfFuelException {
+        car.drive();
     }
 
-    public void moveBackward() {
-        allStop();
-        tank.decreaseLeftSpeed();
-        tank.decreaseRightSpeed();
-    }
-
-    public void allStop() {
-        tank.stopLeft();
-        tank.stopRight();
-    }
-
-    public void turnLeft() {
-        allStop();
-        tank.increaseRightSpeed();
-        tank.decreaseLeftSpeed();
-    }
-
-    public void turnRight() {
-        allStop();
-        tank.increaseLeftSpeed();
-        tank.decreaseRightSpeed();
-    }
-
-    public void raiseAlarm() {
-        tank.raiseAlarm();
+    public void goForLongDrive() throws NotEnoughFuelException {
+        if (car.checkFuelLevel() < 5) throw new NotEnoughFuelException();
+        for (int i = 0; i < 5; i+=1) car.drive();
     }
 }
