@@ -3,7 +3,8 @@
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/-4.12.jar"/>
-	<classpathentry kind="lib" path="/Applications/IntelliJ IDEA.app/Contents/lib/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="output" path="classes/production/InterfaceSegregation"/>
+	<classpathentry kind="lib" path="../lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="../lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="../lib/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>
