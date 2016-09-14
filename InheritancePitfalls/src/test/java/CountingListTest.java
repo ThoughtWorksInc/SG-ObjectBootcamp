@@ -32,7 +32,7 @@ public class CountingListTest {
         List<String> myList = Arrays.asList("Batman", "Robin");
 
         countingList.addAll(myList);
-        //TODO: Why did this unit test fail???
+        //FIXME: Why did this unit test fail???
         assertEquals(2, countingList.getCounter());
     }
 
