@@ -1,7 +1,5 @@
 package rules;
 
-import java.util.Arrays;
-
 public class AddEveryOtherRule implements GameRule {
     @Override
     public int calculateResult(int[] input) {
