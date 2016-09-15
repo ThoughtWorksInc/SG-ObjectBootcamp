@@ -1,54 +1,72 @@
+import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.number.OrderingComparison.greaterThan;
+import static org.hamcrest.number.OrderingComparison.lessThan;
+
 public class DriverTest {
+	
+	Driver driver;
+	Car car;
+	Radio radio;
+	
+	@Before
+	public void setup(){
+//		car = ???
+//		radio = ???
+		driver = new Driver();
+	}
+	
     @Test
     public void shouldSpeedUp(){
-        Driver driver = new Driver();
+        int initialSpeed = car.getSpeed();
         driver.speedUp();
-
-        //assert car speed has increased
+        
+    	assertThat(car.getSpeed(), greaterThan(initialSpeed));
     }
 
     @Test
     public void shouldSlowDown(){
-        Driver driver = new Driver();
-        driver.slowDown();
-
-        //assert car speed has decreased
+    	int initialSpeed = car.getSpeed();
+    	driver.slowDown();
+        
+    	assertThat(car.getSpeed(), lessThan(initialSpeed));
     }
 
     @Test
     public void shouldTurnOnRadio(){
-        Driver driver = new Driver();
         driver.listenToRadio();
-
-        //assert radio is on
+        
+        assertThat(radio.isTurnedOn(), is(true));
     }
 
     @Test
     public void shouldTurnOffRadioToConcentrate(){
-        Driver driver = new Driver();
         driver.listenToRadio();
         driver.concentrate();
 
-        //assert radio is off
+        assertThat(radio.isTurnedOn(), is(false));
     }
 
     @Test
     public void shouldTurnRadioUpWhenFavouriteSongComesOn(){
-        Driver driver = new Driver();
         driver.listenToRadio();
+        int initialVolume = radio.getVolume();
+        
         driver.listeningToFavouriteSong();
 
-        //assert volume has increased
+        assertThat(radio.getVolume(), greaterThan(initialVolume));
     }
 
     @Test
     public void shouldTurnRadioDownToTalkToPassenger(){
-        Driver driver = new Driver();
         driver.listenToRadio();
+        int initialVolume = radio.getVolume();
+        
         driver.talkingToPassenger();
 
-        //assert volume has decreased
+        assertThat(radio.getVolume(), lessThan(initialVolume));
     }
 }

@@ -8,4 +8,8 @@ public class Car {
     public void decelerate() {
         speed -= 1;
     }
+    
+    public int getSpeed(){
+    	return speed;
+    }
 }
