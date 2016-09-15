@@ -1,9 +1,14 @@
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 public class CarTest {
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
     @Test
     public void shouldTopUpFuel() {
         Car car = new Car(5);
@@ -36,10 +41,12 @@ public class CarTest {
         assertThat(car.checkFuelLevel(), is(6)); //1+2+1+0=4
     }
 
-    @Test(expected = OutOfFuelException.class)
+    @Test
     public void shouldThowOutOfFuelWhenFuelRunsOut(){
         Car car = new Car(1);
         car.speedUp();
+
+        thrown.expect(OutOfFuelException.class);
         car.speedUp();
     }
 }
