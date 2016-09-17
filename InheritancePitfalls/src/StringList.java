@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class MyStringList {
+public class StringList {
 	private ArrayList<String> list = new ArrayList<>();
 	public void add(String t) {
 		list.add(t);

@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 /**
  * This is a famous Java example by Joshua Bloch to highlight the pitfalls of inheritance
  */
-public class CountingList extends MyStringList {
+public class CountingStringList extends StringList {
     private int counter = 0;
 
     @Override

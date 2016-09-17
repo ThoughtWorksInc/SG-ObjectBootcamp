@@ -9,7 +9,7 @@ public class CountingListTest {
 
     @Test
     public void shouldReturnCorrectCounterForAddingASingleElement() {
-        CountingList countingList = new CountingList();
+        CountingStringList countingList = new CountingStringList();
 
         countingList.add("Batman");
 
@@ -18,7 +18,7 @@ public class CountingListTest {
 
     @Test
     public void shouldReturnCorrectCounterForAddingASingleElementMultipleTimes() {
-        CountingList countingList = new CountingList();
+        CountingStringList countingList = new CountingStringList();
 
         countingList.add("me");
         countingList.add("you");
@@ -28,7 +28,7 @@ public class CountingListTest {
 
     @Test
     public void shouldReturnCorrectCounterForAddingMultipleElements() {
-        CountingList countingList = new CountingList();
+        CountingStringList countingList = new CountingStringList();
         List<String> myList = Arrays.asList("Batman", "Robin");
 
         countingList.addAll(myList);
@@ -38,7 +38,7 @@ public class CountingListTest {
 
     @Test
     public void shouldReturnTheCorrectToStringFormat() {
-        CountingList countingList = new CountingList();
+        CountingStringList countingList = new CountingStringList();
         List<String> myList = Arrays.asList("Batman", "Robin");
 
         countingList.addAll(myList);
