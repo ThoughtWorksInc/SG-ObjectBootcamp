@@ -3,25 +3,30 @@ package shapes;
 public class Trapezium extends Shape {
 	//Area = ((b+t)/2) * h
 	
-	private int base;
-	private int top;
-	private int height;
+	private double base;
+	private double top;
+	private double height;
 	
-	public Trapezium(int base, int top, int height){
+	public Trapezium(double base, double top, double height){
 		this.base = base;
 		this.top = top;
 		this.height = height;
 	}
 	
-	public int getBase(){
+	public double getBase(){
 		return base;
 	}
 	
-	public int getTop(){
+	public double getTop(){
 		return top;
 	}
 	
-	public int getHeight(){
+	public double getHeight(){
 		return height;
+	}
+
+	@Override
+	public double getArea() {
+		return 0;
 	}
 }

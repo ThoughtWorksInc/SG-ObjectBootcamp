@@ -3,19 +3,24 @@ package shapes;
 public class Rectangle extends Shape {
 	//Area = w*h
 	
-	private int width;
-	private int height;
+	private double width;
+	private double height;
 	
-	public Rectangle(int width, int height){
+	public Rectangle(double width, double height){
 		this.width = width;
 		this.height = height;
 	}
 	
-	public int getWidth(){
+	public double getWidth(){
 		return width;
 	}
 	
-	public int getHeight(){
+	public double getHeight(){
 		return height;
+	}
+
+	@Override
+	public double getArea() {
+		return 0;
 	}
 }

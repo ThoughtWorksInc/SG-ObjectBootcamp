@@ -3,13 +3,18 @@ package shapes;
 public class Square extends Shape {
 	// Area = x^2
 	
-	private int sideLength;
+	private double sideLength;
 	
-	public Square(int sideLength){
+	public Square(double sideLength){
 		this.sideLength = sideLength;
 	}
 	
-	public int getSideLength(){
+	public double getSideLength(){
 		return sideLength;
+	}
+
+	@Override
+	public double getArea() {
+		return Math.pow(sideLength, 2);
 	}
 }
