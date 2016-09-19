@@ -22,9 +22,9 @@ public class BloppiDateTest {
     }
 
     @Test
-    public void shouldAcceptNegativeYear(){
+    public void shouldNotAcceptNegativeYear(){
+        thrown.expect(IllegalArgumentException.class);
         BloppiDate date = new BloppiDate(-3,2,1);
-        assertThat(date.toString(), is("1/2/-3"));
     }
 
     @Test

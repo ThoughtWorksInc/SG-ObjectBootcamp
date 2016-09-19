@@ -7,6 +7,7 @@ public class BloppiDate {
     public BloppiDate(int year, int month, int day) {
         if (month > 11 || month < 0) { throw new IllegalArgumentException("Month out of bounds"); }
         if (day > 29 || day < 0) { throw new IllegalArgumentException("Day out of bounds"); }
+        if (year < 0) { throw new IllegalArgumentException("Year cannot be negative."); }
 
         this.year = year;
         this.month = month;
