@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BloppiDate/BloppiDate.iml" filepath="$PROJECT_DIR$/BloppiDate/BloppiDate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BloppiGames/BloppiGames.iml" filepath="$PROJECT_DIR$/BloppiGames/BloppiGames.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Bloppians/Bloppians.iml" filepath="$PROJECT_DIR$/Bloppians/Bloppians.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DependencyInversion/DependencyInversion.iml" filepath="$PROJECT_DIR$/DependencyInversion/DependencyInversion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FunctionalProgramming/FunctionalProgramming.iml" filepath="$PROJECT_DIR$/FunctionalProgramming/FunctionalProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InheritancePitfalls/InheritancePitfalls.iml" filepath="$PROJECT_DIR$/InheritancePitfalls/InheritancePitfalls.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InterfaceSegregation/InterfaceSegregation.iml" filepath="$PROJECT_DIR$/InterfaceSegregation/InterfaceSegregation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LiskovSubstitution/LiskovSubstitution.iml" filepath="$PROJECT_DIR$/LiskovSubstitution/LiskovSubstitution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OpenClosed/OpenClosed.iml" filepath="$PROJECT_DIR$/OpenClosed/OpenClosed.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SingleResponsibility/SingleResponsibility.iml" filepath="$PROJECT_DIR$/SingleResponsibility/SingleResponsibility.iml" />
+    </modules>
+  </component>
+</project>
